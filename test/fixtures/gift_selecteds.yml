@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  gift_receiver_id: 1
+  asin: http://klairvoyant.com
+  imgurl: http://groupgift23.heroku.com/gift-pic.png
+  title: watch
+  amount: 200
+
+two:
+  gift_receiver_id: 1
+  asin: http://yahoo.com
+  imgurl: http://groupgift23.heroku.com/gift-pic.png
+  title: ipod
+  amount: 300

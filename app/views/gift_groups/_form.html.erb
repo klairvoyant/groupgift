@@ -1,0 +1,16 @@
+<%= simple_form_for(@gift_group) do |f| %>
+  <%= f.error_notification %>
+
+   <div class="inputs">
+  
+    <%#= f.input :gift_receiver_id,:input_html => { :value => "#{@receiverId}"  } %>
+    <%= f.input :name,:input_html => { :class => 'specialname' } %>
+    <%= f.input :email,:input_html => { :class => 'specialemail' } %>
+    <%#= f.input :shareamount, :input_html => { :class => 'specialamount' },:label => 'Amount'  %>
+  </div>
+
+ <!-- <div class="actions">-->
+ <div class="addFriendsButton">
+    <%= f.button :submit, 'Add'%>
+  </div>
+<% end %>

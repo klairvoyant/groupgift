@@ -1,0 +1,16 @@
+<%= simple_form_for(@gift_selected) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :gift_receiver_id, :wrapper_html => { :class => 'makehidden'}%>
+    <%= f.input :title, :label=>"Gift Name" %>
+    <%= f.input :asin,:label=>"Location" %>
+    <%= f.input :imgurl,:label=>"Image Path" %>
+    
+    <%= f.input :amount%>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit,  "Create"%>
+  </div>
+<% end %>

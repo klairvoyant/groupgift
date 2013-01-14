@@ -1,0 +1,40 @@
+<%= simple_form_for(@gift_receiver) do |f| %>
+
+<div class="formError">
+  <%= f.error_notification %>
+ </div> 
+
+<div class="formEdit">
+  <div class="inputs">
+    Who's the gift for <br/> <br/>
+    <div class="rowElem">
+      <%= f.input :name,:label=> "Name"  %> 
+    </div>  
+    <div class="rowElem">
+    <%= f.input :email, :as=> :string,:label=> "e-mail" %> 
+    </div>    
+    
+    <div class="rowElem">
+    <%= f.input :occassion,:placeholder =>"Birthday",:label=> 'Occasion' %> 
+     </div>  
+      <div class="rowElem dateHeight">
+    <%= f.input :senddate,:start_year => Date.today.year,:end_year => Date.today.year + 1,:label=> 'Date' %>
+   </div>
+    <div class="rowElem">
+    <%= f.input :coast,:label=> 'Coast' %> 
+    </div>    
+    <div class="rowElem">
+    <%= f.input :imgurl,:label=> "Image URL"%> 
+      
+      <%#*f.file_field :picture%>
+    </div>    
+    <div class="rowElem">
+    <%= f.input :desc,:label=> "Description" %> 
+    </div>    
+  <div class="rowElem" id="firstPageButton">
+    <%= f.button :submit, 'Invite Friends' %>
+  </div>
+  </div>
+</div>
+<% end %>
+  

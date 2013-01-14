@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  gift_receiver_id: 1
+  gift_group_id: 1
+  payed: 1
+
+two:
+  gift_receiver_id: 1
+  gift_group_id: 1
+  payed: 1

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  gift_receiver_id: 1
+  log_in_email: MyString
+
+two:
+  gift_receiver_id: 1
+  log_in_email: MyString

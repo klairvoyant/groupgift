@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Group Gift</title>
+  <%= javascript_include_tag :all %>
+  <%= stylesheet_link_tag 'groupgift','blueprint/liquid','http://fonts.googleapis.com/css?family=Tangerine|Mate', :media => 'screen' %>
+  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen' %> <![endif]-->
+  <%= csrf_meta_tag %>
+  
+</head>
+<body class="container">
+  <div class="span-3 column">
+  &nbsp;  
+</div>
+
+  <div class="span-18 column">
+      <div class="column span-12" id="topGap">
+      <%=image_tag("groupgift.png")%>
+    </div>
+  <div class="column span-11 last" id="menuSection">
+    <span ><%=link_to "How it works","",:class => "menu" %> </span>
+    <span ><%=link_to "Blog","",:class => "menu" %> </span>
+    <span ><%=link_to "Help", "" , :class => "menu" %> </span>
+    
+    <span> 
+    <% if user_signed_in? %>
+      <%= link_to "Sign out",destroy_user_session_path,:class => "menu" %> 
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path,:class => "menu" %>
+    <% end %> 
+    </span>
+    
+  </div>
+ 
+  <%= yield %>
+     
+  <div class="column span-24 last footerlink">
+      <a href="">About </a> | <a href="">Policies</a> | <a href="">Stores</a> | <a href="">Site Map</a> 
+     <div class="copyright">
+	Copyright &copy; 1995-2011 
+     </div>
+      
+      
+    </div>
+ </div> 
+<div class="span-3 column last ">
+  &nbsp;
+</div>  
+</body>
+</html>

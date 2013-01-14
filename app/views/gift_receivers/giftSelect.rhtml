@@ -1,0 +1,84 @@
+<div class="column span-24 last" id="headBox">
+ <div class="column span-5 headboxButton">
+ <%= link_to "1) The Event", "", :class => "super button ash" %>
+   
+</div>
+<div class="column span-6 headboxButton selectedbutton">
+  
+  <%= link_to "2) Select a gift", "", :class => "super button pink" %>
+</div>
+<div class="column span-5 headboxButton">
+  
+  <%= link_to "3) Invite", "", :class => "super button ash" %>
+</div>
+<div class="column span-5 headboxButton last">
+  
+  <%= link_to "4) Confirm it", "", :class => "super button ash" %>
+  
+</div>
+</div>
+<div class="column span-24 last squareBox"  >
+  
+<div class="span-24 column last" id="receiverHead2">
+  <%# if session[:receivername].empty? %>
+  <%# else %>
+  <%#*<div id="receiverName"> Select gift for <%=session[:receivername]    %>
+  <%#end %>  
+  <div class="span-24 column last" id="receiverHead3">
+    
+    <%=render :template=>'gift_selecteds/new'%>
+  </div>
+    
+<%#= form_tag(giftSelect_gift_receivers_path, :method => "get") do %>
+  <%#= label_tag(:catagory, "Catagory:",:class => 'small_label') %>
+  <%#= select_tag(:catagory,options_for_select([['All'],['Apparel'],['Appliances'],['ArtsAndCrafts'],['Automotive'],['Baby'],['Beauty'],['Blended'],['Books'],['Classical'],['DigitalMusic'],['DVD'],
+['Electronics'],['GourmetFood'],['Grocery'],['HealthPersonalCare'],['HomeGarden'],['Industrial'],['Jewelry'],['KindleStore'],['Kitchen'],['Magazines'],['Marketplace'],['Miscellaneous'],['MobileApps'],['MP3Downloads'],['Music'],['MusicalInstruments'],['MusicTracks'],['OfficeProducts'],['OutdoorLiving'],['PCHardware'],['PetSupplies'],['Photo'],['Shoes'],['Software'],['SportingGoods'],['Tools'],['Toys'],['UnboxVideo'],['VHS'],['Video'],['VideoGames'],['Watches'],['Wireless'],['WirelessAccessories']])) %>
+  <%#= label_tag(:q, "Search for:",:class => 'small_label') %>
+  <%#= text_field_tag(:q) %>
+  <%#= submit_tag("Search") %>
+<%# end %>
+ </div>
+<%#*<div class="span-24 column last" id="receiverHead3">%>
+<%#=render :template=>'gift_selecteds/index'%>
+<%#*</div>%>
+<%#*</div>%> 
+
+<%#*<div class="column span-24 last squareBox" >%>
+  
+  <div class="span-24 column last">
+    <div id="selecteditems"> Selected Items </div>
+  <% @gift_selecteds.each do | gift_selected | %>
+    <div  id="selecteditem">
+      <div class="column span-6">
+        <%=image_tag(gift_selected.imgurl,:alt=>'',:title=>'Product',:class => 'image_icon2')%> <br/>
+      </div>
+      <div class="column span-18 last">
+        <div class="column span-17">
+        <span class="Title">
+          <%= gift_selected.title %>
+        </span>  
+        <div class="price">
+         <% if gift_selected.amount!=0 %>
+          <%=gift_selected.amount.to_f %>
+          <%end%>
+         
+          
+        </div>
+          <div id="moreDetails">
+            <%= link_to "#{gift_selected.asin}","#{gift_selected.asin}",:target => "_blank" %>
+          </div>
+          </div>
+        <div class="column span-6 last delButton">
+            <%=link_to "Remove", {:controller=> "gift_selecteds",:action=>"remove",:id=>"#{gift_selected.id}"}, :class => "super button pink", :title => "Delete" %>
+          
+        </div>
+      </div>
+      
+    </div>  
+  <% end %>
+ </div>    
+  
+  <div id="inviteButton">
+    <%= link_to "Invite", gift_groups_path, :class => "super button pink",:title => "Invite Friends" %>
+     </div>
+</div>

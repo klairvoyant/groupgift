@@ -1,0 +1,110 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> Event Manager</title>
+<link rel="stylesheet" href="http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/style.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Event Manager RSS Feed" href="http://184.168.125.69/eventmanager/?feed=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Event Manager Atom Feed" href="http://184.168.125.69/eventmanager/?feed=atom" />
+<link rel="pingback" href="http://184.168.125.69/eventmanager/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://184.168.125.69/eventmanager/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://184.168.125.69/eventmanager/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Event Manager' href='http://184.168.125.69/eventmanager' />
+<link rel='stylesheet' id='events-planner-stylesheet-main-css'  href='http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/css/style.css?ver=3.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='small-calendar-css-css'  href='http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/css/calendar/small-calendar.css?ver=3.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='events-planner-stylesheet-css'  href='http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/css/events-planner-style1.css?ver=3.2.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://184.168.125.69/eventmanager/wp-includes/js/l10n.js?ver=20101110'></script>
+<script type='text/javascript' src='http://184.168.125.69/eventmanager/wp-includes/js/jquery/jquery.js?ver=1.6.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var EPL = {
+	ajaxurl: "http://184.168.125.69/eventmanager/wp-admin/admin-ajax.php",
+	plugin_url: "http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/"
+};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/js/events-planner.js?ver=3.2.1'></script>
+<script type='text/javascript' src='http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/js/tipsy.js?ver=3.2.1'></script>
+<script type='text/javascript' src='http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/js/epl-front.js?ver=3.2.1'></script>
+<script type='text/javascript' src='http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/js/jquery.validate.min.js?ver=3.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://184.168.125.69/eventmanager/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://184.168.125.69/eventmanager/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Event Manager' href='http://184.168.125.69/eventmanager/' />
+<link rel='prev' title='Sample Page' href='http://184.168.125.69/eventmanager/sample-page/' />
+<meta name="generator" content="WordPress 3.2.1" />
+<link rel='canonical' href='http://184.168.125.69/eventmanager/' />
+</head><div style="width:960px; margin-left:auto; margin-right:auto;">
+	<div style="float:left; margin-top:27px; width:206px;">
+		<a href="index.html"><img src="http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/images/logo.png" width="206" height="65" alt="" border="0" /></a>
+	</div>
+	<div style="float:right; margin-top:82px;">
+		<ul class="headermenu">
+			<li><a href="">Help</a></li>
+			<li><a href="">How it Works</a></li>
+			<li><a href="">Blog</a></li>
+			<li><a href="">Signup</a></li>
+		</ul>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<div style="height:19px;"></div>
+
+<div style="background-image:url(http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/images/content-bg-top.png); background-repeat:no-repeat; width:960px; height:12px; margin-left:auto; margin-right:auto;"></div>
+<div style="background-image:url(http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/images/content-bg-mid.png); background-reepat:repeat-y; width:960px; margin-left:auto; margin-right:auto;">
+	<div style="background-image:url(http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/images/gift-pic.png); width:300px; height:416px; background-repeat:no-repeat; margin-left:53px; margin-top:24px; float:left;"></div>
+	<div style="float:left; z-index:999;">
+		<div style="background-image:url(http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/images/the-easiest-way.png); width:589px; height:86px; background-repeat:no-repeat; margin-top:172px; margin-left:-37px;"></div>
+		<div style="margin-top:10px; margin-left:352px;">
+		<a href="<%=url_for( :action=>"index", :controller=>"gift_receivers", :only_path =>false ) %>"><img src="http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/images/get-started-btn.png" width="199" height="51" alt="" border="0" /></a>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<div style="background-image:url(http://184.168.125.69/eventmanager/wp-content/themes/groupbygift/images/content-bg-bot.png); background-repeat:no-repeat; width:960px; height:155px; margin-left:auto; margin-right:auto;"></div>
+
+<div style="height:15px;"></div>
+
+<div class="footerlink">
+	<a href="">About eBay</a> | <a href="">Security Center</a> | <a href="">Buyer Tools</a> | <a href="">Policies</a> | <a href="">Stores</a> | <a href="">Site Map</a> | <a href="">eBay official time</a>
+</div>
+<div class="copyright">
+	Copyright &copy; 1995-2011 eBay Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the eBay User Agreement and Privacy Policy.
+</div>
+
+<div style="height:44px;"></div>
+
+
+
+<div class="slide_down_box" id="slide_down_box">
+
+    <p class="display">
+
+
+
+    </p>
+
+    <p class="incoming" style="display: none;"></p>
+
+    <a href="#" id="dismiss_loader" class="epl_button" style=""><span class=""></span>Close</a>
+
+</div>
+
+
+
+<div id="epl_overlay" class="">
+
+    <div></div>
+
+
+
+</div>
+
+
+
+<div id ="epl_loader">
+
+    <img  src ="http://184.168.125.69/eventmanager/wp-content/plugins/events-planner/images/ajax-loader2.gif" alt="loading..." />
+
+</div></body>
+</html>

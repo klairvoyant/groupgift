@@ -1,0 +1,9 @@
+hello <%= @sender.name %>
+
+for <%=@receiver%> we wish to share a gift. seeking your interest.  please visit the  following link.
+
+you want to pay your share <%=@individualCoast%> $
+<%=  url_for(:action=>"new",:controller=>"orders",:only_path =>false,:coast=>"#{@individualCoast}",:receiverID=>"#{@sender.gift_receiver_id}",:sender=>"#{@sender.id}" ) %>
+
+
+

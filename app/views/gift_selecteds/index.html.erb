@@ -1,0 +1,58 @@
+ <%# @resp.each('Item') do | item |%>
+  <%#*<div class="setSize">%>
+    <%#= item['MoreSearchResultsURL'] %>
+    <%# @gift_selected.asin="http://www.amazon.com/dp/#{item['ASIN']}" %>
+    <%# @gift_selected.gift_receiver_id=session[:receiverid] %>
+    <%#g =item['MediumImage'].nil? %>
+    <%# if g==false %>
+        <%#item['MediumImage'].each  do | img|%>
+        <%# if img[0]=="URL" %>
+          <%#=image_tag(img[1],:alt=>'Amazon',:title=>'Product',:class => 'image_icon')%> <br/>
+          <%# @gift_selected.imgurl=img[1]  %>
+        <%#end%>
+      <%#end%>
+    <%#else%> 
+       <%#=image_tag("/images/rectangular box.jpg",:alt=>'Amazon',:title=>'Product',:class => 'image_icon')%> <br/>
+    <%#end%> <!--if check       -->
+    
+    
+    
+    <%#item['ItemAttributes'].each  do | attri|%>
+      <%# if attri[0]=="ListPrice" %>
+        <%#attri[1].each  do | pric|%>
+    
+    
+          <%# if pric[0]=="FormattedPrice" %> 
+    <%#*<div class="price"> <%=pric[1]%>
+             
+          <%#end%>
+             
+          <%# if pric[0]=="Amount" %>
+             <%# @gift_selected.amount=pric[1] %>
+          <%#end%>
+             
+        <%#end%> <!-- price -->
+      <%#end%> <!--   list price -->
+      
+             
+             
+      <%# if attri[0]=="Title" %>
+         <%#*<div class="Title"> <%=attri[1]%> 
+         <%# @gift_selected.title=attri[1] %>
+      <%#end%>
+         
+   <%# end %> <!--item attribute-->
+   <%#*<div id="moreDetails">%>
+  <%#= link_to "For Details","http://www.amazon.com/dp/#{item['ASIN']}",:target => "_blank" %>
+   <%#*</div>%>
+    <%#*<div id="selectButton">%>
+       <%#=render :template=>'gift_selecteds/new'%>
+    <%#*</div>%> 
+   <%#*</div>%>
+<%#end %>
+
+
+<%#*-------------------------------%>
+<%# @resp.each('Item') do | item |%>
+<%#=item%>
+<%#end%>

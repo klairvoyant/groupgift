@@ -1,0 +1,62 @@
+<div class="column span-24 last" id="headBox">
+  <div><h1> Invite Friends </h1></div>
+ <div class="column span-6 headboxButton">
+ 1) The Event 
+   
+</div>
+
+<div class="column span-6 headboxButton selectedbutton">
+  
+  2) Invite Friends
+</div>
+<div class="column span-6 headboxButton last">
+  
+  3) Confirm it
+  
+</div>
+</div>
+<div class="column span-24 last squareBox" >
+  
+<div id="head1">
+  <div id="friends"> 
+    Add Friends to share the gift
+  </div>
+ <%=render :template=>'gift_groups/new'%>
+</div> 
+
+
+<div id="head2">
+<div id="friends"> 
+  Selected friends for Gift sharing </br>
+  <% if @gift_groups.count!=0%>
+  Coast per one person <%=@totalCoast/@gift_groups.count %> $
+  <%  @individualCoast=@totalCoast/@gift_groups.count %>
+  <%end%>
+</div>
+
+<table>
+  
+<% @gift_groups.each do |gift_group| %>
+  <tr>
+    <!-- <td><%#= gift_group.gift_receiver_id %></td>-->
+    <!--<td><%#=gift_group.id  %></td>-->
+    <td><%=gift_group.name  %></td>
+    <td><%= gift_group.email %></td>
+    
+    <td><%#= link_to 'Show', gift_group %></td>
+    <td><%#= link_to 'Edit', edit_gift_group_path(gift_group) %></td>
+    <td><%= link_to 'Delete',gift_group, :confirm => 'Are you sure?', :method => :delete,:class =>"medium button pink" %></td>
+     </tr>
+<% end %>
+</table>
+
+<br />
+<%#=  paginate @gift_groups %>
+</div>
+
+<%#= link_button_to "Back", url_for(:action=>"index",:controller=>"welcome")%>&nbsp; &nbsp;
+<%#= link_button_to "Send Invitation Mails", url_for(sendmails_gift_groups_path)%> &nbsp; &nbsp;
+<div id="invitationButton">
+<%= link_to "Send Mails",sendmails_gift_groups_path(:individualCoast=>@individualCoast),:class =>"large button pink"%>
+</div>
+</div>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Gift receiver:</b>
+  <%= @gift_group.gift_receiver_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @gift_group.email %>
+</p>
+
+<p>
+  <b>Shareamount:</b>
+  <%= @gift_group.shareamount %>
+</p>
+
+<%= link_to 'Edit', edit_gift_group_path(@gift_group) %> |
+<%= link_to 'Back', gift_groups_path %>

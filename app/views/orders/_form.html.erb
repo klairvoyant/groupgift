@@ -1,0 +1,19 @@
+
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%#= f.input :cart_id, :wrapper_html => { :class => 'paymentForm'} %>
+    <%#= f.input :ip_address, :wrapper_html => { :class => 'paymentForm'} %>
+    <%= f.input :first_name  %>
+    <%= f.input :last_name %>
+    <%= f.input :card_type,:collection =>[["Visa","visa"],["MasterCard","master"],["Discover","discover"],["American Express","american_express"]] %>
+    <%= f.input :card_number,:label=>'Number' %>
+    <%= f.input :card_verification,:hint => 'Card verification value (CVV)' %>
+    <%= f.input :card_expires_on,:as=>:date,:discard_day=> true, :start_year=> Date.today.year,:end_year=>(Date.today.year+10),:add_month_numbers=>true %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

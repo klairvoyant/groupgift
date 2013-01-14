@@ -1,0 +1,108 @@
+<div class="column span-24 last" id="headBox">
+  <div><h1> Confirm it </h1></div>
+ <div class="column span-6 headboxButton">
+ 1) The Event 
+   
+</div>
+
+<div class="column span-6 headboxButton">
+  
+  2) Invite Friends
+</div>
+<div class="column span-6 headboxButton selectedbutton last">
+  
+  3) Confirm it
+  
+</div>
+</div>
+<div class="column span-24 last squareBox" >
+
+  <div class="column span-24 last youStartedHeading">
+    <%=current_user.name %>(<%=current_user.email %>), Gift sharing you started are
+   </div> 
+  <div class="column span-24 last">
+    
+    <%  @dashboard.each do |dash_board | %>
+    <div class="youStarted">
+      <% @count=@count+1 %>
+      
+      <%=@count%>) To <%= dash_board.gift_receiver.name %> for the occasion <%=dash_board.gift_receiver.occassion %>, Dated <%= dash_board.gift_receiver.senddate %> </br></br>
+      
+      <!--  start of displaying data for each record  selected gift information-->
+      <%# @gift_selecteds= GiftSelected.find(:all,:conditions=>{:gift_receiver_id=>dash_board.gift_receiver_id})%>
+      <% @gift_selecteds= GiftReceiver.find(:all,:conditions=>{:id=>dash_board.gift_receiver_id})%>
+      
+      <div class="column span-12 smallBox">
+        <div class="smallHead">
+          Selected Gift
+        </div>
+      <% @gift_selecteds.each do |gift_selected | %>
+        <% if gift_selected.imgurl.nil?%>
+        <%else%>
+      <%=image_tag(gift_selected.imgurl,:alt=>'',:title=>'Product',:class => 'image_icon2')%> <br/>
+      <% end %>
+        <div class="column span-24 last">
+          <div class="smallTitle">
+          <%= gift_selected.desc %>
+          </div>
+          <div class="smallPrice">
+          <%=gift_selected.coast.to_f %>$
+          <%@totalCoast=@totalCoast + (gift_selected.coast.to_f)%>
+          </div>  
+          <%#= link_to "Buy",gift_selected.asin ,:target => "_blank" %>
+        </div>  
+    <% end %>
+  </div>               
+      <!-- end of displaying data for each record  selected gift information -->
+      <!-- start of displaying data for each record  shared friends -->
+      
+      <div class="column span-11 last">
+        
+        <%  @gift_groups = GiftGroup.find(:all,:conditions=>{:gift_receiver_id=>dash_board.gift_receiver_id})%>
+        <div class="smallBox">
+          <div class="smallHead">
+          Shared Friends  Payed
+        </div>
+        <% @gift_groups.each do |gift_group | %>
+              <!-- start of payment check -->
+              
+        <%  @payments = Payment.find(:first,:conditions=>{:gift_receiver_id=>dash_board.gift_receiver_id,:gift_group_id=>gift_group.id})%>
+        <% if @payments.nil?  %>   
+            <%  @payed=0 %>
+        <% else %>  
+              <%  @payed=@payments.payed  %>
+              <% @totalPayed=@totalPayed+@payed %>
+        <% end %>      
+              <!--   end of payment check -->
+          
+          <div class="smallTitle" >
+          <%= gift_group.name %>- <%= gift_group.email %> &nbsp; <%=@payed %>  </br>
+          </div>
+        <% end %>
+            collected <%=@totalPayed%>  
+            <%@totalPayed=0%>
+        </div>  
+        
+        </div> 
+      
+      <!-- end of displaying data for each record  shared friends -->
+      <div id="cancelButton">
+            <%= link_to "Cancel",finish_cancelgift_path(:receiverID=>dash_board.gift_receiver_id),:class =>"large button pink"%>
+      </div>  
+   </div>   
+    
+    <% end %>
+    
+    
+    
+  </div>
+  <div class="column span-8">
+    &nbsp;
+  </div>
+  <div class="column span-8">
+<%= link_to "Start new gift Sharing", gift_receivers_path, :class => "large button pink",:title => "start new gift sharing" %>
+  </div>
+  <div class="column span-8 last">
+    &nbsp;
+  </div>
+</div>

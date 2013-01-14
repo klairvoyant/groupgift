@@ -1,0 +1,49 @@
+/*  
+	Theme Name: 	GroupByGift
+	Theme URI: 		JobSolutionCenter.com
+	Description:	Special Theme for GroupByGift
+	Version: 		1.0
+	Author: 		Websky Creative
+	Author URL: 	JobSolutionCenter.com
+*/
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+body{
+	background-image:url(images/body-bg.png);
+}
+.headermenu{
+	list-style:none;
+	}
+	.headermenu li{
+		float:left;
+	}
+	.headermenu li a{
+		font-family:Arial;
+		font-size:0.8em;
+		display:block;
+		margin-right:44px;
+		color:#333135;
+		text-decoration:none;
+		font-weight:bold;
+	}
+	.headermenu li a:hover{
+		text-decoration:underline;
+	}
+.footerlink, .copyright{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:Arial;
+	font-size:0.75em;
+	color:#333135;
+}
+.footerlink a{
+	color:#333135;
+	text-decoration:none;
+}
+.footerlink a:hover{
+	text-decoration:underline;
+}

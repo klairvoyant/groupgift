@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: john
+  email: john@klairvoyant.com
+  occassion: marriage
+  senddate: 2011-11-25
+  coast: 300
+
+two:
+  id: 2
+  name: rigy
+  email: rigy@klairvoyant.com
+  occassion: Birthday
+  senddate: 2011-11-26
+  coast: 300

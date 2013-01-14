@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Gift receiver:</b>
+  <%= @gift_selected.gift_receiver_id %>
+</p>
+
+<p>
+  <b>Asin:</b>
+  <%= @gift_selected.asin %>
+</p>
+
+<p>
+  <b>Imgurl:</b>
+  <%= @gift_selected.imgurl %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @gift_selected.title %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @gift_selected.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_gift_selected_path(@gift_selected) %> |
+<%= link_to 'Back', gift_selecteds_path %>

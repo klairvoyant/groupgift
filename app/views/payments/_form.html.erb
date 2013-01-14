@@ -1,0 +1,13 @@
+<%= simple_form_for(@payment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :gift_receiver_id %>
+    <%= f.input :gift_group_id %>
+    <%= f.input :payed %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
